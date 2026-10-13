@@ -1,0 +1,5 @@
+{
+  "name": "tandem-mods",
+  "owner": { "name": "Tandem" },
+  "plugins": [{ "name": "auto-model", "source": "./" }]
+}

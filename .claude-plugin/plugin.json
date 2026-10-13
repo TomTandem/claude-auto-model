@@ -2,6 +2,9 @@
   "name": "auto-model",
   "version": "0.2.0",
   "description": "Choisit automatiquement le modèle Claude 5.5 (Haiku, Sonnet ou Opus) selon la requête, et affiche un indicateur au-dessus du prompt.",
-  "author": { "name": "Tandem" },
-  "types": "./types/index.d.ts"
+  "author": {
+    "name": "Tandem"
+  },
+  "types": "./types/index.d.ts",
+  "license": "MIT"
 }

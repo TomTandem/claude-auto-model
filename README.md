@@ -32,3 +32,7 @@ Répondre `y` pour ajouter le marketplace, puis choisir la portée « user ». L
 - Tarifs utilisés pour l'économie estimée : constante `PRICES` (hypothèses, à ajuster).
 
 Changer de modèle en cours de conversation invalide le cache de prompt : sur de longues sessions, trop d'allers-retours peuvent coûter plus qu'ils n'économisent.
+
+## Licence
+
+MIT, voir [LICENSE](LICENSE).

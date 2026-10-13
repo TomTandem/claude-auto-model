@@ -42,7 +42,7 @@ describe('auto-model', () => {
       const sets = world(on, { haiku: tier, current: 'claude-sonnet-5-5' })
       await $.prompt.submit(prompt(text))
       if (tier === 'sonnet') expect(sets).toEqual([])
-      else expect(sets).toEqual([{ key: 'model', value: `claude-${tier}-5-5` }])
+      else expect(sets).toEqual([{ key: 'model', value: tier }])
     })
   }
 
@@ -55,13 +55,13 @@ describe('auto-model', () => {
   test('réponse de Haiku illisible → règles de secours', async ($, on) => {
     const sets = world(on, { haiku: 'peut-être ?', current: 'claude-haiku-5-5' })
     await $.prompt.submit(prompt('Écris un script python qui renomme les fichiers'))
-    expect(sets).toEqual([{ key: 'model', value: 'claude-opus-5-5' }])
+    expect(sets).toEqual([{ key: 'model', value: 'opus' }])
   })
 
   test('Haiku indisponible → règles de secours', async ($, on) => {
     const sets = world(on, { haiku: 'fail', current: 'claude-opus-5-5' })
     await $.prompt.submit(prompt('Rédige un post LinkedIn sur notre dernière mission'))
-    expect(sets).toEqual([{ key: 'model', value: 'claude-sonnet-5-5' }])
+    expect(sets).toEqual([{ key: 'model', value: 'sonnet' }])
   })
 
   test('prompt trop court → modèle conservé', async ($, on) => {

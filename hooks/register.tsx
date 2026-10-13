@@ -2,10 +2,11 @@ import type { Register } from 'claude-code'
 
 import type { Stats } from '../types'
 
+// La ligne « Model » de /config n'accepte que des alias (haiku, sonnet, opus…).
 const MODELS = {
-  haiku: 'claude-haiku-5-5',
-  sonnet: 'claude-sonnet-5-5',
-  opus: 'claude-opus-5-5',
+  haiku: 'haiku',
+  sonnet: 'sonnet',
+  opus: 'opus',
 } as const
 
 type Tier = keyof typeof MODELS
